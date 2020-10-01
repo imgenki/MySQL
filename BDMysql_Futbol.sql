@@ -104,10 +104,10 @@ DELIMITER $$
 CREATE PROCEDURE ejerc_3 (IN p_codEquipo int, IN p_precioAnual int, IN p_precioRecision int, OUT p_FutbolistasActivosEquipo int, OUT p_FutbolistasActivosEspecifico int)
 
 BEGIN
-    SET p_FutbolistasActivosEquipo = (SELECT count(coddnionie) FROM contratos WHERE p_codEquipo = contratos.p_codEquipo
+    SET p_FutbolistasActivosEquipo = (SELECT count(coddnionie) FROM contratos WHERE p_codEquipo = contratos.codEquipo
                     AND fechaFin > NOW() AND fechaInicio < NOW());
-    SET p_FutbolistasActivosEspecifico = (SELECT count(coddnionie) FROM contratos WHERE p_codEquipo = contratos.p_codEquipo
-                    AND p_precioAnual > contratos.p_precioAnual AND p_precioResicion > contratos.p_precioResicion
+    SET p_FutbolistasActivosEspecifico = (SELECT count(coddnionie) FROM contratos WHERE p_codEquipo = contratos.codEquipo
+                    AND p_precioAnual > contratos.precioAnual AND p_precioResicion > contratos.precioResicion
                     AND fechaFin > NOW() AND fechaInicio < NOW());
 END
 
