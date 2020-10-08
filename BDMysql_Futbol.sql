@@ -1,7 +1,7 @@
 /* Creación de Base de datos */
 
-CREATE DATABASE Futbol;
-USE Futbol;
+CREATE DATABASE FutbolDB;
+USE FutbolDB;
 
 /* Creación de Tablas */
 
@@ -40,12 +40,12 @@ insert into futbolistas values ('33333333G', 'Futbolista3', 'Inglesa');
 insert into futbolistas values ('44444444S', 'Futbolista4', 'Española');
 insert into futbolistas values ('55555555A', 'Futbolista5', 'Inglesa');
 
-insert into contratos values (null,'44444444S', 3, '8/11/2018', '6/4/2019', 12369, 1235);
-insert into contratos values (null,'55555555A', 6, '12/11/2012', '6/4/2020', 15987, 1256);
-insert into contratos values (null,'22222222R', 5, '12/1/2010', '6/4/2015', 17896, 125);
-insert into contratos values (null,'11111111F', 4, '2/10/2013', '12/6/2015', 12896, 148);
-insert into contratos values (null,'33333333G', 7, '9/10/2011', '12/8/2013', 1789, 14);
-insert into contratos values (null,'33333333G', 7, '9/10/2019', '12/8/2025', 1789, 14);
+insert into contratos values (null,'44444444S', 3, '2018-11-08', '2019-04-06', 12369, 123535);
+insert into contratos values (null,'55555555A', 6, '2012-02-11', '2020-06-04', 15987, 125653);
+insert into contratos values (null,'22222222R', 5, '2010-12-01', '2015-06-04', 17896, 125635);
+insert into contratos values (null,'11111111F', 4, '2013-02-10', '2015-12-06', 12896, 14863);
+insert into contratos values (null,'33333333G', 1, '2011-09-10', '2013-12-08', 1789, 14341);
+insert into contratos values (null,'33333333G', 2, '2019-09-10', '2025-12-08', 1789, 14123);
 
 -- Procedimientos
 -- P1
