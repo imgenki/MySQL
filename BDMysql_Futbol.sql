@@ -66,7 +66,7 @@ DELIMITER ;
 DELIMITER $$
 
 create procedure ejerc_2 (IN nomEquipo varchar(40), IN codLiga char(5),
-							 IN localidad varchar(60), IN internacional bit, OUT LigaExiste int , IN InsercionCorrecta int)
+							 IN localidad varchar(60), IN internacional bit, OUT LigaExiste int , OUT InsercionCorrecta int)
 BEGIN
 SET LigaExiste = 0;
 SET InsercionCorrecta = 0;
