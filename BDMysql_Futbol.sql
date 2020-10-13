@@ -9,14 +9,14 @@ CREATE TABLE Ligas (codLiga char(5) primary key, nomLiga varchar(50));
 
 CREATE TABLE Equipos (codEquipo integer AUTO_INCREMENT PRIMARY KEY, nomEquipo varchar(40), codLiga char(5) DEFAULT 'PDN',
 localidad varchar(60), internacional tinyint(1) default 0,
-FOREIGN KEY (codLiga) REFERENCES Ligas(codLiga));
+FOREIGN KEY (codLiga) REFERENCES Ligas(codLiga)) ON DELETE CASCADE;
 
 create table Futbolistas (codDNIoNIE char(9) PRIMARY KEY, nombre varchar(50), nacionalidad varchar(40));
 
 create table Contratos (codContrato integer AUTO_INCREMENT PRIMARY KEY, codDNIoNIE char(9), codEquipo integer, 
 fechaInicio date, fechaFin date, precioAnual integer, precioRecision integer,
-FOREIGN KEY (codEquipo) REFERENCES Equipos(codEquipo),
-FOREIGN KEY (codDNIoNIE) REFERENCES Futbolistas(codDNIoNIE)
+FOREIGN KEY (codEquipo) REFERENCES Equipos(codEquipo) ON DELETE CASCADE,
+FOREIGN KEY (codDNIoNIE) REFERENCES Futbolistas(codDNIoNIE) ON DELETE CASCADE
 );
 
 -- Inserciones 
