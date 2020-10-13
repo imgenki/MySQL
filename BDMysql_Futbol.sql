@@ -9,7 +9,7 @@ CREATE TABLE Ligas (codLiga char(5) primary key, nomLiga varchar(50));
 
 CREATE TABLE Equipos (codEquipo integer AUTO_INCREMENT PRIMARY KEY, nomEquipo varchar(40), codLiga char(5) DEFAULT 'PDN',
 localidad varchar(60), internacional tinyint(1) default 0,
-FOREIGN KEY (codLiga) REFERENCES Ligas(codLiga)) ON DELETE CASCADE;
+FOREIGN KEY (codLiga) REFERENCES Ligas(codLiga)ON DELETE CASCADE) ;
 
 create table Futbolistas (codDNIoNIE char(9) PRIMARY KEY, nombre varchar(50), nacionalidad varchar(40));
 
@@ -85,7 +85,7 @@ CASE LigaExiste
         IF @NumeroEquiposDespues>@NumeroEquiposAntes THEN
         SET InsercionCorrecta = 1;
         ELSE
-        SET InsercionCorrecta = 1;
+        SET InsercionCorrecta = 0;
         END IF;
 
         END;
